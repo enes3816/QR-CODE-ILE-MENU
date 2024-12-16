@@ -18,15 +18,15 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 50px;
+  gap: 90px;
   flex-wrap: wrap;
-  margin-top: 50px;
+  margin-top: 90px;
 }
 
 .menu {
   position: relative;
   width: 300px;
-  margin: 20px;
+  margin: 50px;
   background-color: rgba(0, 0, 0, 0.7); 
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
@@ -49,11 +49,11 @@ body {
   background-color: #444;
 }
 
-.menu:hover .submenu {
+.menu:hover .acilirmenu {
   display: block;
 }
 
-.submenu {
+.acilirmenu {
   display: none;
   position: absolute;
   top: 100%;
@@ -63,20 +63,66 @@ body {
   border-radius: 0 0 10px 10px;
 }
 
-.submenu ul {
+.acilirmenu ul {
   list-style-type: none;
   padding: 0;
   margin: 0;
 }
 
-.submenu ul li {
+.acilirmenu ul li {
   color: white;
   padding: 15px;
   cursor: pointer;
 }
 
-.submenu ul li:hover {
+.acilirmenu ul li:hover {
   background-color: #555;
 }
 
+/* Yatay açılacak Pizza alt menüsü */
+.pizza-menu {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background-color: #222;
+  border-radius: 10px;
+  margin-top: 0;
+}
 
+.pizza-menu ul {
+  display: flex;
+  padding-left: 20px;
+}
+
+.pizza-menu ul li {
+  padding: 10px;
+}
+
+.pizza:hover > .pizza-menu {
+  display: block;
+}
+
+/* Diğer menüler için dikey alt menüler */
+.submenu {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background-color: #222;
+  border-radius: 10px;
+  margin-top: 0;
+}
+
+.submenu ul {
+  padding-left: 20px;
+}
+
+.submenu ul li {
+  padding: 10px;
+}
+
+/* Diğer kategoriler için alt menüyü gösterme */
+.submenu-toggle:hover > .submenu {
+  display: block;
+}
