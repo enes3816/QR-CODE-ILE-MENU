@@ -14,6 +14,7 @@ html, body {
 
 body {
   background-image: url('resimler/arkplan.jpg');
+  
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -78,3 +79,20 @@ main {
   font-weight: bold;
   color: #d9534f;
 }
+
+
+a {
+  text-decoration: none;  
+  color: inherit;         
+  cursor: pointer;       
+}
+
+a:hover {
+  color: #007bff;        
+  text-decoration: underline; 
+}
+
+img {
+  max-width:100%;
+  height: auto;
+  }
