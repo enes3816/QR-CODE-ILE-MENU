@@ -1,3 +1,9 @@
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  background-color: aqua;
+}
+
 html, body {
   margin: 0;
   padding: 0;
@@ -14,115 +20,61 @@ body {
   height: 100vh;
 }
 
-.menu-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 90px;
-  flex-wrap: wrap;
-  margin-top: 90px;
+header {
+  background-color: #333;
+  color: white;
+  padding: 20px 0;
 }
 
-.menu {
-  position: relative;
-  width: 300px;
-  margin: 50px;
-  background-color: rgba(0, 0, 0, 0.7); 
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+main {
+  padding: 20px;
+}
+
+.menu-category {
+  margin: 30px 0;
+}
+
+.menu-category h2 {
+  text-align: center;
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.menu-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .menu-item {
-  width: 100%;
-  padding: 25px;
-  font-size: 20px;
-  color: white;
-  background-color: #333;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
+  width: 200px;
+  margin: 10px;
   text-align: center;
-  transition: background-color 0.3s ease;
-}
-
-.menu-item:hover {
-  background-color: #444;
-}
-
-.menu:hover .acilirmenu {
-  display: block;
-}
-
-.acilirmenu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.8);
-  width: 100%;
-  border-radius: 0 0 10px 10px;
-}
-
-.acilirmenu ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-.acilirmenu ul li {
-  color: white;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 15px;
-  cursor: pointer;
 }
 
-.acilirmenu ul li:hover {
-  background-color: #555;
+.menu-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
 }
 
-/* Yatay açılacak Pizza alt menüsü */
-.pizza-menu {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 100%;
-  background-color: #222;
-  border-radius: 10px;
-  margin-top: 0;
+.menu-item h3 {
+  margin: 10px 0;
+  font-size: 18px;
+  color: #333;
 }
 
-.pizza-menu ul {
-  display: flex;
-  padding-left: 20px;
+.menu-item p {
+  font-size: 16px;
+  color: #555;
 }
 
-.pizza-menu ul li {
-  padding: 10px;
-}
-
-.pizza:hover > .pizza-menu {
-  display: block;
-}
-
-/* Diğer menüler için dikey alt menüler */
-.submenu {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 100%;
-  background-color: #222;
-  border-radius: 10px;
-  margin-top: 0;
-}
-
-.submenu ul {
-  padding-left: 20px;
-}
-
-.submenu ul li {
-  padding: 10px;
-}
-
-/* Diğer kategoriler için alt menüyü gösterme */
-.submenu-toggle:hover > .submenu {
-  display: block;
+.menu-item .price {
+  font-weight: bold;
+  color: #d9534f;
 }
